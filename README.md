@@ -13,6 +13,7 @@ To analyze the structure and dynamics of this criminal network by:
 - Ranking participants based on influence and connectivity
 - Plotting degree centrality (x-axis) against betweenness centrality (y-axis) with node labels and average-based dividing lines to identify four communication behavior regions
 - Visualizing the deviations of each node's centrality values (degree, betweenness, closeness) from their respective averages to detect outliers and potential leaders
+- Detecting communities using the Louvain method, grouping nodes by connectivity, and visualizing the network with community-based colors
 
 ## 🛠️ Methods & Tools
 
@@ -32,13 +33,13 @@ The Ciel network is sparse, as most nodes have low degree centrality and there a
 From the results of our centrality measures:
 - **Node 2** is the ring leader with the highest degree, betweenness, and closeness centrality.
 - **Node 1** acts as the lieutenant, supporting Node 2 and holding the second-highest scores.
-- The network is highly centralized around **Nodes 2 and 1**, who serve as communication and control hubs.
 - **Node 13** also plays a significant role in communication flow and is closely tied to the core leadership (Node 1 being a key part of that leadership).
+- The network is highly centralized around **Nodes 2, 1, and 13**, who serve as communication and control hubs.
 
 We identify:
-- **Key players (action segment):** Nodes 1, 2, and 13.
-- **Drug mules (low centrality nodes):** Nodes 5, 6, 12, 14, 15, 16, 18, 19, 20, 21, 23, 25.
-- **Complimentary segment:** Nodes 4, 7, 8, 10, 11, 13, 3, 9, 15, 17, 22, 24.
+- **Action segment:** Nodes 1, 2, and 13.
+- **Drug mules:** Nodes 5, 6, 12, 14, 15, 16, 18, 19, 20, 21, 23, 25.
+- **Complimentary segment:** Nodes 3, 4, 7, 8, 9, 10, 11, 13, 15, 17, 22, 24.
 
 Removing **Nodes 2, 1, and 13** would dismantle the network by disrupting its core communication and organizational structure.
 
